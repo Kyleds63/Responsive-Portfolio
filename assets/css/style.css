@@ -251,7 +251,7 @@ then following style will be set*/
     }
  
 
-      a#logo{
+      #logo{
         height:75px;
         margin-left:10vw; 
       }
@@ -297,8 +297,19 @@ then following style will be set*/
     }
     /*Portfolio*/
     div .work{
+      float:none;
       margin-left: 1.8vw;
 
+    }
+    .work h3{
+      width:100%;
+    }
+    .work img{
+      display:block;
+      margin:auto;
+      vertical-align: middle;
+      width:100%;
+      height:auto;
     }
 
   
@@ -371,6 +382,9 @@ then following style will be set*/
   }
   .container a{
     margin:0;
+  }
+  div .work{
+    display:inline;
   }
    section.main-section img.auth-image{
       display:block;
