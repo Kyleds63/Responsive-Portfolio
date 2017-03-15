@@ -57,7 +57,7 @@ h3 {
   z-index: 99;
   width: 100%;
   margin: 0 0 30px;
-  overflow: hide;
+  overflow: auto;
   color: #fff;
   background: #fff;
   border-bottom: 2px solid #ccc;
@@ -66,7 +66,7 @@ h3 {
 #logo {
   float: left;
   width: 250px;
-  height: 100px;
+  height: 90px;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
   font-weight: 700;
@@ -238,105 +238,119 @@ input[type=submit] {
   border: 0 none;
 }
 
-/*If the browser window is smaller than max-width
-then following style will be set*/
+
+/*------------------------------------------------------------MEDIA QUERY--------------------------------------------*/
 @media screen and (max-width: 980px) {
  
-    body{
+  body{
      
-      font-size: 14px;
-      font-weight:600;
-      line-height: 28px;
-      background: green;
-    }
+    font-size: 14px;
+    font-weight:600;
+    line-height: 28px;
+  }
  
 
-      #logo{
-        height:75px;
-        margin-left:10vw; 
-      }
-    nav a:last-child{
-      margin-right:12vw;
-    
-      }
-   .main-section {
-      position: relative;
-      width:38%;
-      margin-left:10vw;
-      height:auto;
-    }
-    section.main-section h1{
-      font-size: 25px;
-      line-height: 40px;
+  #logo{
+    height:75px;
+    margin-left:10vw; 
+    width: 215px;
+  }
+
+  nav a:last-child{
+    margin-right:12vw;
+  }
+
+  section.main-section {
+    width:38%;
+    margin-left:10vw;
+    height:auto;
+  }
+
+  section.main-section h1{
+    font-size: 25px;
+    line-height: 40px;  
+  }
+
+  section.main-section img.auth-image{
+    display:block;
+    width: 100%;
+    height:auto;
+  }
+  section.main-section p{
+    display:block;
+  }
+
+  section.sidebar{
       
-    }
-    section.main-section img.auth-image{
-      display:block;
-      width: 100%;
-      height:auto;
-    }
-    section.main-section p{
-      display:block;
-    }
+    position:relative;
+    margin-right:10vw;
+    padding:right:10vw;
+    width:225px
+    height:170px;
+  }
 
-    section.sidebar{
-      
-      position:relative;
-      margin-right:10vw;
-      width:225px
-      height:170px;
-       ;
-    }
+  footer{
+    position:relative;
+    bottom:0;
+    width:100vw;
+    height:88px;
+  }
 
-    footer{
-     
-     position:relative;
-     bottom:0;
-     width:100vw;
-     height:88px;
-    }
-    /*Portfolio*/
-    div .work{
-      float:none;
-      margin-left: 1.8vw;
 
-    }
-    .work h3{
-      width:100%;
-    }
-    .work img{
-      display:block;
-      margin:auto;
-      vertical-align: middle;
-      width:100%;
-      height:auto;
-    }
+  .work img{
+    display:block;
+    margin:auto;
+    height:auto;
+  }
+
+  div .work{
+    display:inline;
+    width:100%;
+  }
+  .work h3{
+    width:100%;
+  }
+
+  .work img{
+    display:inline-block;
+    width: 100%;
+    height:auto;
+  }
 
   
  
 }
 
 @media screen and (max-width: 768px) {
-/*-------index.html-----------------*/
-/*Header*/
- /* a#logo{
-    width:30%;
-    height:75px;
-    margin-left:7vw;    
-  }*/
+  /*-------index.html-----------------*/
+  /*Header*/
+  #logo{
+    margin-left:5vw;
+    line-height:75px;
+  }
+  /*Main Section*/
 
+  #main-container{
+    padding-top: 110px
+  }
+  .container{
+    width:100%;
 
-/*Main Section*/
-  .main-section {
+  }
+
+  section.main-section {
     float:none;
-    clear:both;
-    position:relative;
     display:block;
-    width:85%;
+    width:90%;
     margin:0;
     margin:auto;
-    margin-bottom:5vh;      
+    margin-bottom:5vh; 
+    overflow:hidden;     
   } 
+
+  .work h3{
+    font-size:18px;
+  }
 
     
   section.sidebar{
@@ -345,8 +359,7 @@ then following style will be set*/
     display:block;
     position:relative;
     max-width:650px;
-    width:85%;
-    background-color: red;
+    width:90%;
     margin: auto;
     margin-bottom:5vh;
   }
@@ -357,39 +370,118 @@ then following style will be set*/
     display:inline;
   }
 
-     section.main-section img.auth-image{
-      display:inline;
-      width:50%;
-      height:auto;
-    }
-  
+  section.main-section img.auth-image{
+    display:inline;
+    width:50%;
+    height:auto;
+  }
+
+  /*--------------PORTFOLIO-----------*/
+  div.work {
+    display:inline;
+    float:left;
+    width:45%;
+  }
+/*  div .work{
+    float:none;
+    padding:0;
+    display:inline;
+    width:100%;
+  }
+  .work h3{
+    width:100%;
+    font-size:18px;
+    display: block;
+
+   
+  }
+
+  .work img{
+    display:inline-block;
+    width: 45%;
+    height:auto;
+  }*/
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px)  {
+  body{
+    font-size:13.5px;
+  }
+  /*Header*/
+  #masthead{
+    overflow: hidden;
+  }
+  header nav{
+    float: none;
+    text-align:center;
+    margin:0;
+
+  }
+  header nav a{
+    font-size:15px;
+  }
+  header nav a:first-child {
+    padding: 0;
+    padding-left:5vw;
+    padding-right:10vw;
+    margin:0;
+
+    
+  }
+  header nav a:nth-child(2){
+    padding:0;
+    padding-left:10vw;
+    padding-right:10vw;
+    margin:0;
+  
+  }
+  header nav a:last-child{
+    margin:0;
+    padding:0;
+    padding-left:10vw;
+  }
   #logo{
     display:block;
     width:100vw;
     margin:0;
+    padding:0;
     overflow:hide;
-
+    font-size:25px;
   }
-  .container nav{
-    display:block;
-    width:100vw;
-    margin:0;
-    text-align:center;
-
-  }
-  .container a{
-    margin:0;
-  }
+  
   div .work{
     display:inline;
   }
-   section.main-section img.auth-image{
-      display:block;
-      width:100%;
-      height:auto;
 
-    }
+  section.main-section img.auth-image{
+    display:block;
+    width:100%;
+    height:auto;
+    margin:0;
+    margin-bottom:15px;
+
+  }
+  
+  section.main-section h1{
+    font-size:22px;
+  }
+
+  .sidebar{
+    padding: 0px;
+    padding-top:20px;
+    padding-left:20px ;
+    display:block;
+    margin:auto;
+    height:185px;
+    margin-top:30px;
+    margin-bottom:30px;
+  }
+  h2{
+    font-size:20px;
+  }
+
+  .work h3{
+    font-size:15px;
+    padding:0;
+  }
 }
